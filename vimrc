@@ -654,7 +654,7 @@ endif
 set background=dark
 set t_Co=256
 
-colorscheme fisa
+  colorscheme fisa
 " colorscheme solarized
 " colorscheme molokai
 " colorscheme desert
