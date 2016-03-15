@@ -328,9 +328,6 @@ nnoremap gj j
 
 " F1 - F6 设置
 
-" F1 废弃这个键,防止调出系统帮助
-" I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
-noremap <F1> <Esc>"
 
 " F2 行号开关，用于鼠标复制代码用
 " 为方便复制，用<F2>开启/关闭行号显示:
@@ -344,7 +341,10 @@ function! HideNumber()
   endif
   set number?
 endfunc
-nnoremap <F2> :call HideNumber()<CR>
+" F1 显示隐藏行号
+noremap <F1> :call HideNumber()<CR>
+" F2 显示nerdtree开关
+noremap <F2> :NERDTreeToggle<CR>
 " F3 显示可打印字符开关
 nnoremap <F3> :set list! list?<CR>
 " F4 换行开关
@@ -654,7 +654,8 @@ endif
 set background=dark
 set t_Co=256
 
-colorscheme solarized
+colorscheme fisa
+" colorscheme solarized
 " colorscheme molokai
 " colorscheme desert
 
