@@ -177,7 +177,8 @@ if count(g:bundle_groups, 'tmux')
 endif
 
 if count(g:bundle_groups, 'markdown')
-    Plug 'plasticboy/vim-markdown', {'for': 'md'}
+    " Plug 'plasticboy/vim-markdown', {'for': 'md'}
+    Plug 'plasticboy/vim-markdown'
     " https://github.com/suan/vim-instant-markdown
     " npm -g install instant-markdown-d
     " Plug 'suan/vim-instant-markdown'
