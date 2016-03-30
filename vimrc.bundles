@@ -141,7 +141,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
 
 " 主题
-Plug 'altercation/vim-colors-solarized'
+Plug 'evilittle/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'fisadev/fisa-vim-colorscheme'
 
