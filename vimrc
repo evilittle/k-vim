@@ -12,6 +12,8 @@ syntax on
 " 安装 bundles
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
+elseif filereadable(expand("~/.config/nvim/vimrc.bundles")) " neovim
+  source ~/.config/nvim/vimrc.bundles
 endif
 
 " ensure ftdetect et al work by including this after the bundle stuff
@@ -208,6 +210,15 @@ function! NumberToggle()
   endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" 防止tmux下vim的背景色显示异常
+" Refer: http://sunaku.github.io/vim-256color-bce.html
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
 
 "==========================================
 " FileEncode Settings 文件编码,格式
@@ -477,7 +488,7 @@ vnoremap <leader>y "+y
 " nnoremap <silent> p p`]
 
 " select all
-map <Leader>sa ggVG"
+map <Leader>sa ggVG
 
 " select block
 nnoremap <leader>v V`}
